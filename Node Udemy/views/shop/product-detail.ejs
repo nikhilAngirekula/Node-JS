@@ -4,3 +4,15 @@
 
 <body>
     <%- include('../includes/navigation.ejs') %>
+
+        <main class="centered">
+            <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                <hr>
+                <h2><%= product.price %></h2>
+                    <p><%= product.description %></p>
+                        <form action="/cart" , method="POST">
+                            <button class="btn" type="submit">Add To Cart</button>
+                        </form>
+                    </main>
+
+                    <%- include('../includes/end.ejs') %>
